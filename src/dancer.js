@@ -7,17 +7,16 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   this.originalSpeed = timeBetweenSteps;
   this.top = top;
   this.left = left;
-  this.groupTop = 0;
-  this.groupLeft = 0;
-  this.groupOrderTop = 0;
+  this.groupTop = 0; // starting positions
+  this.groupLeft = 0; //
+  this.groupOrderTop = 0; //
   this.groupOrderLeft = 0;
 
   this.grouping = false;
-  // this.synced = false;
   this.index = 0;
-
-  this.step();
   this.setPosition(this.top, this.left);
+  this.step();
+
 };
 
 makeDancer.prototype.step = function() {

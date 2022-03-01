@@ -3,7 +3,8 @@ $(document).ready(function() {
   window.danceGroups = {
     blinkers: [],
     shimmyers: [],
-    jumpers: []
+    jumpers: [],
+    espers: []
   };
 
   $('.addDancerButton').on('click', function(event) {
