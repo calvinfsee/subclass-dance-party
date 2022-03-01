@@ -2,6 +2,7 @@
 var Shimmyer = function (top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   this.timeBetweenSteps = timeBetweenSteps * 2;
+  this.group = 'shimmyers';
 };
 
 Shimmyer.prototype = Object.create(makeDancer.prototype);

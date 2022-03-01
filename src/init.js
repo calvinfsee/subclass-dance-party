@@ -1,5 +1,8 @@
 $(document).ready(function() {
   window.dancers = [];
+  window.blinkers = [];
+  window.shimmyers = [];
+  window.jumpers = [];
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -29,6 +32,7 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
+    window[dancer.group].push(dancer);
   });
   $('.lineUpButton').on('click', function (event) {
     //iterate through the window.dancers array;
@@ -37,5 +41,22 @@ $(document).ready(function() {
     }
 
   });
+  $('.danceBattleButton').on('click', function (event) {
+
+  });
 });
+
+
+/* IDEAS
+- add ESP dancer who senses when a ghost has moused over him
+- add images
+Dance Battle: all dancers of the same type group together in one part of the screen AND do their group dance.
+ - jumpers jump in wave (jumper 1 jumps, and)
+ - shimmyers shimmy in succession
+ - blinkers blink back and forth in a line
+ - fourth dancer
+
+
+DANCE OFF: four dancers come to the middle and one is crowned the winner based on how fast they are dancing.
+*/
 

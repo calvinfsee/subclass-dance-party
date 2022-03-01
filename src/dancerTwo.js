@@ -1,6 +1,7 @@
 //Jumper
 var Jumper = function (top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
+  this.group = 'jumpers';
 
 };
 Jumper.prototype = Object.create(makeDancer.prototype);
