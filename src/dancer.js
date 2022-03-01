@@ -3,27 +3,29 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 
   // use jQuery to create an HTML <span> tag
   this.$node = $('<span class="dancer"></span>');
-  this.dancerImage = '';
-  // $('<img ).appendTo(this.$node);
   this.timeBetweenSteps = timeBetweenSteps;
   this.originalSpeed = timeBetweenSteps;
   this.top = top;
   this.left = left;
-  this.grouped = false;
-  // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
-  // this one sets the position to some random default point within the body
-  this.step(timeBetweenSteps);
+  this.groupTop = 0;
+  this.groupLeft = 0;
+  this.groupOrderTop = 0;
+  this.groupOrderLeft = 0;
+
+  this.grouping = false;
+  // this.synced = false;
+  this.index = 0;
+
+  this.step();
   this.setPosition(this.top, this.left);
 };
 
 makeDancer.prototype.step = function() {
   // the basic dancer doesn't do anything interesting at all on each step,
   // it just schedules the next step
-  if (!this.grouped) {
+  if (!this.grouping) {
     setTimeout(this.step.bind(this), this.timeBetweenSteps);
   }
-
-
 };
 
 makeDancer.prototype.setPosition = function(top, left) {
@@ -40,7 +42,20 @@ makeDancer.prototype.lineUp = function (newTop, newLeft) {
   this.left = newLeft;
 };
 
-makeDancer.prototype.danceBattle = function (index) {
-  this.grouped = true;
-  this.timeBetweenSteps = 2000;
+makeDancer.prototype.danceBattle = function () {
+  let dancer = this;
+  setTimeout(function () {
+    dancer.grouping = true;
+    dancer.timeBetweenSteps = 0;
+
+  }, 200 * dancer.index);
+
+
+  setTimeout(function () {
+    dancer.grouping = false;
+    dancer.lineUp(dancer.groupTop, dancer.groupLeft);
+    dancer.timeBetweenSteps = 800;
+    dancer.step();
+  }, 2000 + (100 * dancer.index));
+  // (window.danceGroups[dancer.group].length * 100)
 };

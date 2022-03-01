@@ -32,9 +32,11 @@ $(document).ready(function() {
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
-    $(dancer.$node).addClass(dancer.group);
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
+    dancer.index = window.danceGroups[dancer.group].length;
+    dancer.groupTop = dancer.groupTop + (dancer.index * dancer.groupOrderTop);
+    dancer.groupLeft = dancer.groupLeft + (dancer.index * dancer.groupOrderLeft);
     window.danceGroups[dancer.group].push(dancer);
   });
   $('.lineUpButton').on('click', function (event) {
@@ -47,7 +49,7 @@ $(document).ready(function() {
     for (let key in window.danceGroups) {
       let group = window.danceGroups[key];
       for (let i = 0; i < group.length; i++) {
-        group[i].danceBattle(i);
+        group[i].danceBattle();
       }
     }
   });

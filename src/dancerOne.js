@@ -1,8 +1,14 @@
 //Shimmyer
 var Shimmyer = function (top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
+  this.$node = $('<span class="dancer shimmyer"><img src="lib/shimmyer.jpg"></span>');
   this.timeBetweenSteps = timeBetweenSteps * 2;
   this.group = 'shimmyers';
+  this.groupTop = 200;
+  this.groupLeft = 1400;
+  this.groupOrderTop = 150;
+  this.groupOrderLeft = 0;
+
 };
 
 Shimmyer.prototype = Object.create(makeDancer.prototype);
@@ -21,6 +27,6 @@ Shimmyer.prototype.step = function() {
   setTimeout(this.setPosition.bind(this, this.top, this.left), timeBetweenShimmy * 4);
 };
 
-Shimmyer.prototype.danceBattle = function (index, time) {
+Shimmyer.prototype.danceBattle = function () {
   makeDancer.prototype.danceBattle.call(this);
 };
