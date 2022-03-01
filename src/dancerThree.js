@@ -1,7 +1,7 @@
 //ESP Sensing dancer
 var Esper = function (top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<span class="dancer esper"><img src="lib/shimmyer.jpg" class="dancer esper"></span>');
+  this.$node = $('<span class="dancer esper"><img src="lib/smallpuff.jpg" class="dancer esper"></span>');
   this.timeBetweenSteps = timeBetweenSteps * 2;
   this.group = 'espers';
   this.groupTop = 700;

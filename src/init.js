@@ -57,23 +57,9 @@ $(document).ready(function() {
 });
 
 
-/* IDEAS
-- add ESP dancer who senses when a ghost has moused over him
-- add images
-Dance Battle: all dancers of the same type group together in one part of the screen AND do their group dance.
- - jumpers jump in wave (jumper 1 jumps, and)
- - shimmyers shimmy in succession
- - blinkers blink back and forth in a line
- - fourth dancer
-
-Pseudocode ideas
- - Superclass has a danceBattle method which is called by each subclass, like the step method
- - Potentially add this.groupPositions to each subclass, designating a starting area
- - Superclass method will use lineUp method to reposition dancers
- - lineUp(groupTop, groupLeft + (order * 75))
- - this.timeBetweenSteps = time
-
-
+/* Tasks
+- background image
+- implement puffer fish
 DANCE OFF: four dancers come to the middle and one is crowned the winner based on how fast they are dancing.
 */
 
