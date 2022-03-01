@@ -3,6 +3,8 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 
   // use jQuery to create an HTML <span> tag
   this.$node = $('<span class="dancer"></span>');
+  this.dancerImage = '';
+  // $('<img ).appendTo(this.$node);
   this.timeBetweenSteps = timeBetweenSteps;
   this.originalSpeed = timeBetweenSteps;
   this.top = top;
@@ -41,10 +43,4 @@ makeDancer.prototype.lineUp = function (newTop, newLeft) {
 makeDancer.prototype.danceBattle = function (index) {
   this.grouped = true;
   this.timeBetweenSteps = 2000;
-
-  //index gives the position of a dancer in its group (subclass array).
-  //time gives the time elapsed between members of the same group
-  //default group positions, and a default factor in which to multiply by the index to order the dancers
-  //use lineup to set new position
-  //setTimeout(step, i x 1000);
 };
