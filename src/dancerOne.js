@@ -20,3 +20,7 @@ Shimmyer.prototype.step = function() {
   //move center
   setTimeout(this.setPosition.bind(this, this.top, this.left), timeBetweenShimmy * 4);
 };
+
+Shimmyer.prototype.danceBattle = function (index, time) {
+  makeDancer.prototype.danceBattle.call(this);
+};

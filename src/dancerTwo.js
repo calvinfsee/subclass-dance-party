@@ -15,3 +15,7 @@ Jumper.prototype.step = function() {
   //fall
   setTimeout(this.setPosition.bind(this, this.top, this.left), timeBetweenJump * 2);
 };
+
+Jumper.prototype.danceBattle = function (index, time) {
+  makeDancer.prototype.danceBattle.call(this);
+};
