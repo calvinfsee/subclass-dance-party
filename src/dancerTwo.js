@@ -21,6 +21,6 @@ Jumper.prototype.step = function() {
   setTimeout(this.setPosition.bind(this, this.top, this.left), timeBetweenJump * 2);
 };
 
-Jumper.prototype.danceBattle = function () {
-  makeDancer.prototype.danceBattle.call(this);
-};
+// Jumper.prototype.danceBattle = function () {
+//   makeDancer.prototype.danceBattle.call(this);
+// };

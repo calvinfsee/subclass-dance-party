@@ -21,6 +21,6 @@ makeBlinkyDancer.prototype.step = function() {
   this.$node.toggle();
 };
 
-makeBlinkyDancer.prototype.danceBattle = function () {
-  makeDancer.prototype.danceBattle.call(this);
-};
+// makeBlinkyDancer.prototype.danceBattle = function () {
+//   makeDancer.prototype.danceBattle.call(this);
+// };

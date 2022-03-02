@@ -54,6 +54,14 @@ $(document).ready(function() {
       }
     }
   });
+  //desired pufferfish behavior if we had more time.
+  //add an event listener for hovering over a pufferfish
+  //on mousover:
+  //grab the source element using jQuery
+  //replace the smallpuff.jpg text in the element with bigpuff.jpg text
+  //on mouseoff, do the opposite
+
+
 });
 
 
@@ -62,4 +70,3 @@ $(document).ready(function() {
 - implement puffer fish
 DANCE OFF: four dancers come to the middle and one is crowned the winner based on how fast they are dancing.
 */
-

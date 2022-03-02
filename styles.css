@@ -31,10 +31,16 @@ img {
   height: 100px;
   width: 100px;
 }
-.esper:hover {
+.bigpuff:hover {
   height: 200px;
   width: 200px;
 }
+.smallpuff:hover {
+  visibility: hidden;
+}
+/* Attach two image files, which depending on the hover will be hidden or visible. */
+/* Puffed puffer in background, small puffer in front*/
+/* On hover, small puffer goes invisible, making the puffed puffer visible.*/
 
 .button {
   background-color: white;

@@ -27,6 +27,6 @@ Shimmyer.prototype.step = function() {
   setTimeout(this.setPosition.bind(this, this.top, this.left), timeBetweenShimmy * 4);
 };
 
-Shimmyer.prototype.danceBattle = function () {
-  makeDancer.prototype.danceBattle.call(this);
-};
+// Shimmyer.prototype.danceBattle = function () {
+//   makeDancer.prototype.danceBattle.call(this);
+// };
